@@ -1,0 +1,267 @@
+/* *, *::before, *::after {
+  box-sizing: border-box;
+    margin: 0;
+    @media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+} */
+
+html {
+    background-color: #fff;
+    /* background-color: antiquewhite; */
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0px 40px;
+    
+    /* border: dashed #0B4A5B; 5px */
+}
+
+.header_menu ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    /* text-align: center;     */
+    /* margin: 0;
+    padding: 0; */
+    /* border: dashed #0B4A5B; 5px */
+}
+
+.header_menu a {
+    color: #0B4A5B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header_menu a:hover,
+.header_menu a:focus-visible {
+    opacity: 80%;
+}
+
+body {   
+    font-family: montserrat;
+    /* background-color: antiquewhite; */
+    /* padding-inline: 21%; */
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-inline-size: 1280px;
+    margin-inline: auto;
+}
+    
+
+.two-columns {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    padding-block-end: 5px;
+    margin-block: 1em;
+    /* min-height: 30vw; */
+
+    @media (width > 680px) { 
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+    }
+}
+
+.pic {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pic2 {
+    display:flex;
+    /* width: 100%;
+    height: 100%; */
+    width: fit-content;
+    height: fit-content;
+    /* max-height: min-content; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    border-radius: 20px;    
+}
+
+.pic2_div {
+    background-image:  url("../img/what-is-bouldering.jpg");
+    border-radius: 20px;    
+    background-position: top;
+    background-size: cover;
+    min-height: 30vw;
+
+    @media (width < 680px) {
+        background-position-y: -90px;
+
+    }
+}
+
+.orange_link {
+    color: inherit;
+}
+
+.orange_link:visited {
+    color: darksalmon;
+}
+
+.orange_link:hover {
+    opacity: 80%;
+}
+
+.orange_link:active {
+    color: #4676A9;
+}
+
+.green_link {
+    color: rgb(29, 242, 157);
+}
+
+.green_link:hover {
+    opacity: 60%;
+}
+
+.green_link:active {
+    color: rgb(1, 209, 126);
+}
+
+.blue_text {
+    color: #4676A9;
+}
+
+h1 {
+    line-height: 1;
+    font-size: 6vw;
+    line-break: normal;    
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    /* margin-block-start: -1vw;
+    margin-block-end: 3vw; */
+    margin-block: 40px;
+    animation: h1_rise 1s ease-out;
+}
+
+@keyframes h1_rise {
+    0% {
+        transform: translateY(3vw);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(3vw);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+h2 {
+    color: #CC741B;
+    animation: h2_rise 1s ease-out;
+}
+
+@keyframes h2_rise {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+section {
+    ul, ol {
+    list-style-type:lower-alpha
+    }
+
+    li {
+        margin-block: 5px;
+    }
+
+    li::marker {
+        color: rgb(208, 215, 18);
+        content: '😂  ';
+    }
+}
+
+
+/* p {
+    margin-block: 20px;
+} */
+/* 
+.accent {
+    color: #CC741B;
+} */
+
+.blue_frame {
+    color: #fff;
+    background-color: #4676A9;
+    padding-inline: 2%;
+    border: solid #6582D2 5px;
+    border-radius: 20px;
+    background-image: url("../img/simple-steps.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.blue_frame strong {
+    color: #ffffff;
+}
+
+.light_blue_frame {
+    color: #fff;
+    background-color: #4676A9;
+    padding-inline: 2%;
+    border: solid #0B4A5B 5px;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+}
+
+footer {
+    text-align: center;
+    /* border-width: 20px;
+    border-color: #fff;
+    border-radius: 20px; */
+}
+
+footer:active {
+    scale: 110%;
+}
